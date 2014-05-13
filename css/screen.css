@@ -19,9 +19,62 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
+body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; line-height: 1.4; }
+
+@font-face { font-family: PFAgoraSansProBlack; src: url("fonts/pfagorasanspro-black.eot"); src: url("fonts/pfagorasanspro-black.eot?#iefix") format("embedded-opentype"), url("fonts/pfagorasanspro-black.woff") format("woff"), url("fonts/pfagorasanspro-black.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: ReformaGroteskDemiCRegular; src: url("fonts/reformagroteskdemic.eot"); src: url("fonts/reformagroteskdemic.eot?#iefix") format("embedded-opentype"), url("fonts/reformagroteskdemic.woff") format("woff"), url("fonts/reformagroteskdemic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+.out { position: relative; background: url(../img/ill2-big.jpg) 50% 0 no-repeat; background-attachment: fixed; }
+
+.container { position: relative; width: 1160px; margin: 0 auto; }
+
+.wrapper { position: relative; width: 960px; margin: 0 auto; }
+
+.popup-map { position: absolute; top: 29px; left: 0; border: 1px solid #ebeff1; height: 28px; padding: 10px 16px 0 49px; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; font-size: 14px; color: #f47920; }
+.popup-map span { display: inline-block; border-bottom: 1px dotted; }
+.popup-map:hover span { border-bottom: none; }
+.popup-map:before { content: ""; position: absolute; top: 2px; left: 2px; background: url('../img/icons-sfda05f1938.png') 0 -209px no-repeat; width: 34px; height: 34px; }
+
+.popup-feedback { position: absolute; top: 29px; right: 0; border: 1px solid #ebeff1; height: 28px; padding: 10px 16px 0 49px; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; font-size: 14px; color: #f47920; }
+.popup-feedback span { display: inline-block; border-bottom: 1px dotted; }
+.popup-feedback:hover span { border-bottom: none; }
+.popup-feedback:before { content: ""; position: absolute; top: 2px; left: 2px; background: url('../img/icons-sfda05f1938.png') 0 -30px no-repeat; width: 34px; height: 34px; }
+
+.header { position: absolute; top: 0; left: 0; right: 0; z-index: 99; }
+.header__inner { background: white; }
+
+.main-menu { padding-top: 92px; padding-bottom: 24px; }
+.main-menu__list { font-size: 0; text-align: center; }
+.main-menu__item { display: inline-block; vertical-align: middle; margin-left: 39px; }
+.main-menu__item:first-child { margin-left: 0; }
+.main-menu__item a { display: block; height: 22px; padding: 5px 14px 4px; font-size: 18px; color: #231f20; font-family: "ReformaGroteskDemiCRegular", sans-serif; text-transform: uppercase; text-decoration: none; }
+.main-menu__item a span { border-bottom: 1px solid #f47920; }
+.main-menu__item a:hover span { border-bottom: none; }
+.main-menu__item a.is-active { color: #f47920; border: 2px solid #f47920; }
+.main-menu__item a.is-active span { border-bottom: none; }
+.main-menu__item a.logo { position: relative; width: 100px; }
+.main-menu__item a.logo i { position: absolute; left: 50%; top: -87px; margin-left: -50px; background: url('../img/icons-sfda05f1938.png') 0 -74px no-repeat; width: 100px; height: 125px; }
+
+.categories { *zoom: 1; }
+.categories:after { content: " "; display: table; clear: both; }
+.categories__item { float: left; height: 55px; line-height: 55px; width: 33.333%; text-align: center; background: #f47920; }
+.categories__item:first-child { background: #dc6916; }
+.categories__item a { text-transform: uppercase; color: white; font-family: "PFAgoraSansProBlack", sans-serif; text-decoration: none; }
+.categories__item.last { background: #fb842d; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.promo-switcher { position: absolute; bottom: -40px; left: 50%; width: 166px; height: 40px; margin-left: -83px; background: #70b0dd; border-top: 4px solid #6798b5; font-size: 16px; color: white; font-family: "ReformaGroteskDemiCRegular", sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+.promo-switcher:before { content: ""; position: absolute; bottom: -14px; left: 0; width: 0px; height: 0px; border-style: solid; border-width: 14px 83px 0 83px; border-color: #70b0dd transparent transparent transparent; }
+
+.promo__places { position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
+.promo__places li { position: absolute; }
+.promo__places li a { position: relative; display: block; width: 23px; height: 23px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background: white; }
+.promo__places li a:before { content: "+"; position: absolute; top: 0px; left: 7px; font-size: 16px; color: #f47920; }
+.promo__places li a:hover { background: #f47920; }
+.promo__places li a:hover:before { color: white; }
+.promo__place1 { top: 42%; left: 13%; }
+
+.push { height: 600px; }

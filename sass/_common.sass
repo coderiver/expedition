@@ -41,9 +41,147 @@
 // 	font-family: "book",arial,sans-serif 
 	
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
+	min-width: 1024px
+	font-size: 14px 
+	font-family: 'PT Sans', sans-serif
 	line-height: 1.4
+//fonts
++font(PFAgoraSansProBlack, pfagorasanspro-black)	
+=agora_b
+	font-family: 'PFAgoraSansProBlack', sans-serif
++font(ReformaGroteskDemiCRegular, reformagroteskdemic)	
+=reforma
+	font-family: 'ReformaGroteskDemiCRegular', sans-serif		
 
+// vars
+$orange: #f47920
 
-// common blocks      
+// common blocks 
+.out
+	position: relative
+	background: url(../img/ill2-big.jpg) 50% 0 no-repeat
+	background-attachment: fixed
+.container
+	position: relative
+	width: 1160px
+	margin: 0 auto  	
+.wrapper
+	position: relative
+	width: 960px
+	margin: 0 auto 
+.popup-map
+	position: absolute
+	top: 29px
+	left: 0
+	border: 1px solid #ebeff1
+	height: 28px
+	padding: 10px 16px 0 49px  
+	+border-radius(20px)
+	font-size: 14px
+	color: $orange
+	span
+		display: inline-block
+		border-bottom: 1px dotted
+	&:hover
+		span
+			border-bottom: none
+	&:before
+		content: ""
+		position: absolute
+		top: 2px
+		left: 2px
+		+s(marker)
+.popup-feedback
+	position: absolute	
+	top: 29px
+	right: 0
+	border: 1px solid #ebeff1
+	height: 28px
+	padding: 10px 16px 0 49px  
+	+border-radius(20px)
+	font-size: 14px
+	color: $orange
+	span
+		display: inline-block
+		border-bottom: 1px dotted
+	&:hover
+		span
+			border-bottom: none 	
+	&:before
+		content: ""
+		position: absolute
+		top: 2px
+		left: 2px
+		+s(feedback)
+
+// header
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 99
+	&__inner
+		background: #fff 
+		
+// menu
+.main-menu
+	padding-top: 92px
+	padding-bottom: 24px
+	&__list
+		font-size: 0
+		text-align: center
+	&__item
+		display: inline-block
+		vertical-align: middle
+		margin-left: 39px
+		&:first-child	
+			margin-left: 0
+		a
+			display: block
+			height: 22px
+			padding: 5px 14px 4px 
+			font-size: 18px
+			color: #231f20
+			+reforma
+			text-transform: uppercase
+			text-decoration: none
+			span
+				border-bottom: 1px solid $orange
+			&:hover
+				span
+					border-bottom: none 	 
+			&.is-active
+				color: $orange
+				border: 2px solid $orange
+				span
+					border-bottom: none
+			&.logo
+				position: relative
+				
+				width: 100px
+				i
+					position: absolute
+					left: 50%
+					top: -87px
+					margin-left: -50px
+					+s(logo)		 			
+     
+.categories
+	+clr
+	&__item
+		float: left
+		height: 55px
+		line-height: 55px
+		width: 33.333%      
+		text-align: center 
+		background: $orange
+		&:first-child
+			background: #dc6916 
+		a
+			text-transform: uppercase
+			color: #fff
+			+agora_b
+			text-decoration: none
+		&.last
+			background: #fb842d 	
