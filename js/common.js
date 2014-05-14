@@ -28,10 +28,23 @@ head.ready(function() {
 			return false;
 		});
 
+	// sticky elements
+
+		function sticky(){
+			var news = $(".container_index").offset().top;
+			console.log(news);
+
+			if (news <= 206) {
+				$(".js-news").addClass('is-fixed');
+			};
+
+		}
+		sticky();
 
 
-
-
+		$(window).scroll(function(){
+    	   	sticky();
+    	});
 
 		$(document).click(function(){
 			$(".js-bounce").hide();		
