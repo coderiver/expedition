@@ -21,10 +21,11 @@ head.ready(function() {
 		});	
 
 		$(".js-bounce").hide();
-		$(".js-promo-points li a").on('click', function(event){
+		$(".js-point").on('click', function(event){
 			$(".js-bounce").hide();
-			$(this).find(".js-bounce").show( "bounce", { times: 3 }, "slow" );
+			$(this).find(".js-bounce").show( "bounce", { times: 2, distance: 20 }, "slow" );
 			event.stopPropagation();
+			return false;
 		});
 
 

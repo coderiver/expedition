@@ -63,8 +63,11 @@ $orange: #f47920
 	background-attachment: fixed
 .container
 	position: relative
-	width: 1160px
-	margin: 0 auto  	
+	width: 1158px
+	margin: 0 auto 
+	background: #fff
+	&.container_index
+		margin-top: -142px  	
 .wrapper
 	position: relative
 	width: 960px
@@ -116,7 +119,7 @@ $orange: #f47920
 
 // header
 .header
-	position: absolute
+	position: fixed
 	top: 0
 	left: 0
 	right: 0
@@ -173,7 +176,7 @@ $orange: #f47920
 		float: left
 		height: 55px
 		line-height: 55px
-		width: 33.333%      
+		width: 386px      
 		text-align: center 
 		background: $orange
 		&:first-child
