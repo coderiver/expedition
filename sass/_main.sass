@@ -19,15 +19,28 @@
 		position: absolute
 		bottom: -14px
 		left: 0
-		+arr(166, 14, #70b0dd, b)   
- 
+		+arr(166, 14, #70b0dd, b)
+	&.is-open
+		background: #92caf1 	   
+		border-top: 4px solid #86aec6
+		&:before
+			content: ""
+			+arr(166, 14, #92caf1, b)
+			
++keyframes(pulse)
+	0%
+		
+	100%
+			
 .promo
+	position: relative
+	overflow: hidden
+	padding-top: 350px
 	&__places
-		position: absolute
-		top: 0
-		left: 0
-		bottom: 0
-		right: 0
+		position: relative
+		height: 400px
+		width: 1280px
+		margin: 0 auto 
 		li
 			position: absolute
 			a
@@ -37,6 +50,7 @@
 				height: 23px
 				+border-radius(50%)
 				background: #fff
+				+animation(pulse 0.5s linear infinite)
 				&:before
 					content: "+"
 					position: absolute
@@ -48,8 +62,108 @@
 					background: $orange
 					&:before
 						color: #fff
+	&__hint
+		position: absolute
+		bottom: 24px
+		width: 312px
+		left: -145px
+		background: #fff
+		z-index: 999
+		&:before
+			content: ""
+			position: absolute
+			bottom: -15px
+			left: 50%
+			margin-left: -15px
+			+arr(30, 15, #fff, b)
+		img
+			display: block
+		p
+			text-align: center
+			padding: 17px 0
+			font-size: 18px
+			color: $orange
+			font-weight: bold 		 					
 	&__place1
-		top: 42%
-		left: 13%
+		top: 79%
+		left: -4%
+	&__place2
+		top: 64%
+		left: 17%
+	&__place3
+		top: 57%
+		left: 24.5%
+	&__place4
+		top: 47%
+		left: 27%
+	&__place5
+		top: 21%
+		left: 33%
+	&__place6
+		top: 44%
+		left: 38%
+	&__place7
+		top: 54%
+		left: 45%
+	&__place8
+		top: 31%
+		left: 42%
+	&__place9
+		top: 38%
+		left: 47%
+	&__place10
+		top: 40%
+		left: 51%
+	&__place11
+		top: 46%
+		left: 56%
+	&__place12
+		top: 76%
+		left: 59%
+	&__place13
+		top: 93%
+		left: 67%
+	&__place14
+		top: 70%
+		left: 72%
+	&__place15
+		top: 65%
+		left: 89%
+	&__place16
+		top: 44%
+		left: 70%
+	&__place17
+		top: 51%
+		left: 72%
+	&__place18
+		top: 47%
+		left: 78%
+	&__place19
+		top: 31%
+		left: 74%
+	&__place20
+		top: 30%
+		left: 81%
+	&__place21
+		top: 16%
+		left: 80%
+	&__place22
+		top: 30%
+		left: 68%
+	&__place23
+		top: 23%
+		left: 64%
+	&__place24
+		top: 18%
+		left: 55%
+	&__place25
+		top: 10%
+		left: 56%
+	&__place26
+		top: 6%
+		left: 50%
+	&__place27
+		top: 0%
+		left: 57%																
 .push
 	height: 600px		

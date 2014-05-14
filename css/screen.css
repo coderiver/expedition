@@ -68,13 +68,51 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 
 .promo-switcher { position: absolute; bottom: -40px; left: 50%; width: 166px; height: 40px; margin-left: -83px; background: #70b0dd; border-top: 4px solid #6798b5; font-size: 16px; color: white; font-family: "ReformaGroteskDemiCRegular", sans-serif; letter-spacing: 1px; text-transform: uppercase; }
 .promo-switcher:before { content: ""; position: absolute; bottom: -14px; left: 0; width: 0px; height: 0px; border-style: solid; border-width: 14px 83px 0 83px; border-color: #70b0dd transparent transparent transparent; }
+.promo-switcher.is-open { background: #92caf1; border-top: 4px solid #86aec6; }
+.promo-switcher.is-open:before { content: ""; width: 0px; height: 0px; border-style: solid; border-width: 14px 83px 0 83px; border-color: #92caf1 transparent transparent transparent; }
 
-.promo__places { position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
+@-moz-keyframes pulse {}
+@-webkit-keyframes pulse {}
+@-o-keyframes pulse {}
+@-ms-keyframes pulse {}
+@keyframes pulse {}
+.promo { position: relative; overflow: hidden; padding-top: 350px; }
+.promo__places { position: relative; height: 400px; width: 1280px; margin: 0 auto; }
 .promo__places li { position: absolute; }
-.promo__places li a { position: relative; display: block; width: 23px; height: 23px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background: white; }
+.promo__places li a { position: relative; display: block; width: 23px; height: 23px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background: white; -webkit-animation: pulse 0.5s linear infinite; -moz-animation: pulse 0.5s linear infinite; -ms-animation: pulse 0.5s linear infinite; -o-animation: pulse 0.5s linear infinite; animation: pulse 0.5s linear infinite; }
 .promo__places li a:before { content: "+"; position: absolute; top: 0px; left: 7px; font-size: 16px; color: #f47920; }
 .promo__places li a:hover { background: #f47920; }
 .promo__places li a:hover:before { color: white; }
-.promo__place1 { top: 42%; left: 13%; }
+.promo__hint { position: absolute; bottom: 24px; width: 312px; left: -145px; background: white; z-index: 999; }
+.promo__hint:before { content: ""; position: absolute; bottom: -15px; left: 50%; margin-left: -15px; width: 0px; height: 0px; border-style: solid; border-width: 15px 15px 0 15px; border-color: white transparent transparent transparent; }
+.promo__hint img { display: block; }
+.promo__hint p { text-align: center; padding: 17px 0; font-size: 18px; color: #f47920; font-weight: bold; }
+.promo__place1 { top: 79%; left: -4%; }
+.promo__place2 { top: 64%; left: 17%; }
+.promo__place3 { top: 57%; left: 24.5%; }
+.promo__place4 { top: 47%; left: 27%; }
+.promo__place5 { top: 21%; left: 33%; }
+.promo__place6 { top: 44%; left: 38%; }
+.promo__place7 { top: 54%; left: 45%; }
+.promo__place8 { top: 31%; left: 42%; }
+.promo__place9 { top: 38%; left: 47%; }
+.promo__place10 { top: 40%; left: 51%; }
+.promo__place11 { top: 46%; left: 56%; }
+.promo__place12 { top: 76%; left: 59%; }
+.promo__place13 { top: 93%; left: 67%; }
+.promo__place14 { top: 70%; left: 72%; }
+.promo__place15 { top: 65%; left: 89%; }
+.promo__place16 { top: 44%; left: 70%; }
+.promo__place17 { top: 51%; left: 72%; }
+.promo__place18 { top: 47%; left: 78%; }
+.promo__place19 { top: 31%; left: 74%; }
+.promo__place20 { top: 30%; left: 81%; }
+.promo__place21 { top: 16%; left: 80%; }
+.promo__place22 { top: 30%; left: 68%; }
+.promo__place23 { top: 23%; left: 64%; }
+.promo__place24 { top: 18%; left: 55%; }
+.promo__place25 { top: 10%; left: 56%; }
+.promo__place26 { top: 6%; left: 50%; }
+.promo__place27 { top: 0%; left: 57%; }
 
 .push { height: 600px; }
