@@ -179,6 +179,11 @@
 		width: 40px
 		height: 58px
 		background: #fff
+		+box-shadow(inset -4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3)
+		+transition(all 150ms linear)
+		cursor: pointer
+		&:hover
+			top: 88px
 		&:before
 			content: ""
 			position: absolute
@@ -192,6 +197,11 @@
 		width: 40px
 		height: 58px
 		background: #fff
+		+box-shadow(inset 4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3)
+		+transition(all 150ms linear)
+		cursor: pointer
+		&:hover
+			top: 88px
 		&:before
 			content: ""
 			position: absolute
@@ -253,5 +263,119 @@
 		+transform(scale(1))
 		img
 			width: 100%
-			height: 100%  		
-
+			height: 100%
+.benefits
+	padding: 78px 100px 105px
+	&__text
+		margin-bottom: 85px
+		letter-spacing: 0.5px
+		text-align: center
+		line-height: 1.8
+.about
+	position: relative
+	border: 2px solid #fec446
+	padding: 28px 20px 64px
+	&__title
+		position: relative
+		top: -48px
+		text-align: center
+		+reforma
+		color: #231f20
+		font-size: 28px
+		text-transform: uppercase
+		p
+			display: inline-block
+			padding: 0 22px
+			line-height: 1
+			background: #fff
+			span
+				display: inline-block
+				border-bottom: 1px solid $orange
+	&__list
+		font-size: 0
+		line-height: 1
+		text-align: center
+	&__item
+		display: inline-block
+		width: 150px
+		margin: 0 10px
+		vertical-align: top
+		font-size: 16px
+		text-transform: uppercase
+		+reforma
+		line-height: 1.4
+		&.violet
+			p
+				color: #727ebd
+		&.green
+			p
+				color: #a4d062
+		&.yellow
+			p
+				color: #fec446
+		&.pink
+			p
+				color: #f37f93						
+	&__img
+		margin-bottom: 20px
+		height: 80px
+		font-size: 0
+	&__more
+		position: absolute
+		bottom: -25px
+		left: 50%
+		width: 225px
+		height: 51px
+		line-height: 51px
+		margin-left: -112px
+		background: $orange
+		border-bottom: 4px solid #c9641a
+		+transition(all 150ms linear)
+		text-align: center
+		color: #fff
+		text-decoration: none
+		+agora_b
+		font-size: 11px
+		text-transform: uppercase 
+		&:hover
+			background: darken($orange, 5%)
+		&:active
+			bottom: -27px
+			border-bottom: 2px solid #c9641a 
+.clients
+	padding: 42px 20px
+	margin-bottom: 68px 
+	border-top: 1px dashed #b0b0b0
+	border-bottom: 1px dashed #b0b0b0 			
+	background: #fafdff
+	.h2
+		margin-bottom: 0
+	&__slider
+		position: relative
+	&__item
+		width: 1118px
+		height: 140px
+		line-height: 140px
+		vertical-align: middle
+		text-align: center
+		img
+			display: inline-block
+			vertical-align: middle
+			margin: 0 30px
+	&__pager
+		position: absolute
+		bottom: -12px
+		left: 0
+		right: 0
+		text-align: center
+		span
+			display: inline-block
+			width: 12px 		 	 			 			  					 		
+			height: 12px
+			margin: 0 9px 
+			font-size: 0
+			cursor: pointer
+			+border-radius(50%)
+			background: #ecf0f1
+			&.cycle-pager-active
+				background: $orange 

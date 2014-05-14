@@ -116,6 +116,34 @@ $orange: #f47920
 		top: 2px
 		left: 2px
 		+s(feedback)
+.h1, .h2
+	position: relative
+	font-size: 34px
+	+agora_b
+	text-transform: uppercase
+	color: #231f20
+	text-align: center		
+	padding-bottom: 30px
+	margin-bottom: 35px 
+	&:before
+		content: ""
+		position: absolute
+		left: 50%
+		bottom: -4px
+		height: 4px
+		width: 73px
+		margin-left: -36px 
+		background: $orange
+.h2
+	+reforma
+	font-size: 28px
+	span
+		display: inline-block
+		border-bottom: 1px solid $orange
+		line-height: 1 
+.heart
+	display: inline-block
+	+s(heart)	
 
 // header
 .header
