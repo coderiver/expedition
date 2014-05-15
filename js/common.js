@@ -31,9 +31,9 @@ head.ready(function() {
 	// promo switcher toggle
 		
 		function switcher(){
-			var top = $(".header").offset().top;
-			if (top > 5) {
-				$(".js-promo-switcher").addClass('is-hidden');
+			if ($(window).scrollTop() > 5) {
+				$(".js-promo-switcher").addClass('is-hidden').text('Показать объекты').removeClass('is-open');
+				$(".js-promo-points").hide();
 			}
 			else{
 				$(".js-promo-switcher").removeClass('is-hidden');

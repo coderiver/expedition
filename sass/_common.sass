@@ -270,11 +270,14 @@ $orange: #f47920
 		padding: 0 26px 0 16px 
 		border-radius: 15px
 		background: #cd6820
+		+transition(background 150ms)
 		color: #fff
 		+placeholder
 			color: #fff
 			font-family: 'PT Sans', sans-serif
 			font-size: 12px
+		&:focus
+			background: darken(#cd6820, 5%) 	
 	button
 		position: absolute
 		top: 8px
