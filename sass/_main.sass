@@ -343,8 +343,7 @@
 			bottom: -27px
 			border-bottom: 2px solid #c9641a 
 .clients
-	padding: 42px 20px
-	margin-bottom: 68px 
+	padding: 42px 20px 
 	border-top: 1px dashed #b0b0b0
 	border-bottom: 1px dashed #b0b0b0 			
 	background: #fafdff
@@ -375,7 +374,83 @@
 			margin: 0 9px 
 			font-size: 0
 			cursor: pointer
-			+border-radius(50%)
+			border-radius: 50%
 			background: #ecf0f1
 			&.cycle-pager-active
-				background: $orange 
+				background: $orange
+.socials
+	padding-top: 68px
+	padding-bottom: 48px
+	&__text
+		position: relative
+		width: 470px
+		margin: 0 auto 50px
+		text-align: center
+		a
+			color: $orange
+			&:hover
+				text-decoration: none 	
+		&:before
+			content: ""
+			position: absolute
+			top: -3px
+			left: -100px
+			+s(quote-left)
+		&:after
+			content: ""
+			position: absolute
+			top: -3px
+			right: -100px
+			+s(quote-right)
+	&__links
+		text-align: center
+		font-size: 0
+		margin-bottom: 65px
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 20px
+	&__plugin
+		text-align: center
+	&__item
+		display: inline-block
+		margin: 0 15px
+		vertical-align: middle 		
+.vk
+	display: block
+	position: relative
+	width: 64px
+	height: 64px
+	line-height: 64px
+	background: #3477b6
+	font-weight: bold
+	color: #fff
+	font-size: 30px
+	text-decoration: none
+.fb
+	display: block
+	position: relative
+	width: 64px
+	height: 64px
+	background: #3a589b 
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -29px 0 0 -29px
+		+s(fb)
+.tw
+	display: block
+	position: relative
+	width: 64px
+	height: 64px
+	background: #47cbf1
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -29px 0 0 -29px
+		+s(tw)		
+						 

@@ -174,7 +174,7 @@ $orange: #f47920
 	&__item
 		display: inline-block
 		vertical-align: middle
-		margin-left: 39px
+		margin-left: 25px
 		&:first-child	
 			margin-left: 0
 		a
@@ -182,6 +182,7 @@ $orange: #f47920
 			height: 22px
 			padding: 5px 14px 4px 
 			font-size: 18px
+			letter-spacing: 1px 
 			color: #231f20
 			+reforma
 			text-transform: uppercase
@@ -224,4 +225,93 @@ $orange: #f47920
 			+agora_b
 			text-decoration: none
 		&.last
-			background: #fb842d 	
+			background: #fb842d
+
+// footer
+.footer
+	width: 1158px
+	margin: 0 auto
+	background: $orange
+	&__inner
+		+clr
+		padding: 18px 30px 0 103px
+	&__left
+		float: left
+		padding-top: 60px
+	&__right
+		float: right
+		padding-top: 60px
+	&__mid
+		overflow: hidden
+		text-align: center
+		p
+			font-size: 12px
+			color: #643b20 
+	&__logo
+		display: inline-block
+		margin-bottom: 8px
+		+s(logo-footer)
+		+opacity(.9)			   
+.main-menu_footer
+	padding: 25px 0
+	background: #d35e09
+	.main-menu__item
+		a
+			color: #fff
+.search
+	position: relative
+	margin-bottom: 55px
+	input[type="text"]
+		width: 190px
+		height: 30px
+		padding: 0 26px 0 16px 
+		border-radius: 15px
+		background: #cd6820
+		color: #fff
+		+placeholder
+			color: #fff
+			font-family: 'PT Sans', sans-serif
+			font-size: 12px
+	button
+		position: absolute
+		top: 8px
+		right: 12px
+		+s(search)
+.scrolltop
+	position: relative
+	display: inline-block
+	margin-left: 15px
+	+reforma
+	color: #fff
+	font-size: 20px
+	text-transform: uppercase
+	text-decoration: none
+	&:before
+		content: ""
+		position: absolute
+		top: 8px
+		right: -22px
+		+s(top)
+.design
+	float: right						   
+	padding-right: 68px
+	margin-bottom: 68px
+	a
+		position: relative
+		display: block
+		width: 65px
+		font-weight: bold
+		text-decoration: none
+		color: #fff
+		font-size: 11px
+		text-transform: uppercase
+		&:before
+			content: ""
+			position: absolute 
+			top: 0px
+			left: -45px
+			+s(flex)
+.jivosite
+	img
+		display: block			
+	
