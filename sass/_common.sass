@@ -147,22 +147,20 @@ $orange: #f47920
 
 // header
 .header
-	position: fixed
+	position: absolute
 	top: 0
 	left: 0
 	right: 0
+	height: 206px
 	z-index: 99
 	.container
 		background: #fff 
-.fixedtop-1
+.fixedtop
 	position: fixed
-	left: 50%
-	margin-left: -579px 
-.fixedtop-2
-	position: fixed
-	top: 151px
 	left: 50%
 	margin-left: -579px
+	&.is-scrolled
+		position: absolute
 	
 // menu
 .main-menu
@@ -209,7 +207,12 @@ $orange: #f47920
 					+s(logo)		 			
      
 .categories
+	position: relative
+	z-index: 2
 	+clr
+	&.is-fixed
+		position: fixed
+		top: 0
 	&__item
 		float: left
 		height: 55px
