@@ -61,13 +61,18 @@ $orange: #f47920
 	position: relative
 	background: url(../img/ill2-big.jpg) 50% 0 no-repeat
 	background-attachment: fixed
+	+r(h900)	
+		background-position: 50% -125px
 .container
 	position: relative
 	width: 1158px
 	margin: 0 auto 
 	background: #fff
 	&.container_index
-		margin-top: -142px  	
+		margin-top: -142px
+	+r(w1280)
+		width: 1024px
+		overflow: hidden
 .wrapper
 	position: relative
 	width: 960px
@@ -159,6 +164,9 @@ $orange: #f47920
 	position: fixed
 	left: 50%
 	margin-left: -579px
+	background: #fff 
+	+r(w1280)	
+		margin-left: -512px 
 	&.is-scrolled
 		position: absolute
 	
@@ -221,7 +229,9 @@ $orange: #f47920
 		text-align: center 
 		background: $orange
 		&:first-child
-			background: #dc6916 
+			background: #dc6916
+		+r(w1280)
+			width: 341px 	 
 		a
 			text-transform: uppercase
 			color: #fff
@@ -235,6 +245,8 @@ $orange: #f47920
 	width: 1158px
 	margin: 0 auto
 	background: $orange
+	+r(w1280)
+		width: 1024px
 	&__inner
 		+clr
 		padding: 18px 30px 0 103px
