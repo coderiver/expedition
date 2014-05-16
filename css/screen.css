@@ -118,7 +118,7 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 .l .l-col2 { float: right; width: 70%; }
 
 .promo-switcher { position: absolute; bottom: -36px; left: 50%; width: 166px; height: 40px; margin-left: -83px; background: #70b0dd; border-top: 8px solid #6798b5; font-size: 16px; color: white; font-family: "ReformaGroteskDemiCRegular", sans-serif; -webkit-transition: bottom 200ms, opacity 200ms, border 200ms linear; -o-transition: bottom 200ms, opacity 200ms, border 200ms linear; transition: bottom 200ms, opacity 200ms, border 200ms linear; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; letter-spacing: 1px; text-transform: uppercase; z-index: 1; }
-.promo-switcher:before { content: ""; position: absolute; bottom: -14px; left: 0; width: 0px; height: 0px; border-style: solid; border-width: 14px 83px 0 83px; border-color: #70b0dd transparent transparent transparent; }
+.promo-switcher:before { content: ""; position: absolute; bottom: -14px; left: 0; width: 0px; height: 0px; border-style: solid; border-width: 14px 83px 0 83px; border-color: #70b0dd transparent transparent transparent; -moz-transform: rotate(0.001deg); -ms-transform: rotate(0.001deg); -webkit-transform: rotate(0.001deg); transform: rotate(0.001deg); }
 .promo-switcher:hover { bottom: -40px; }
 .promo-switcher.is-open { background: #92caf1; border-top: 4px solid #86aec6; }
 .promo-switcher.is-open:before { content: ""; width: 0px; height: 0px; border-style: solid; border-width: 14px 83px 0 83px; border-color: #92caf1 transparent transparent transparent; }
