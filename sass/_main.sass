@@ -2,19 +2,19 @@
  
 .promo-switcher 
 	position: absolute
-	bottom: -40px
+	bottom: -36px
 	left: 50%
 	width: 166px
 	height: 40px
 	margin-left: -83px
 	background: #70b0dd
-	border-top: 4px solid #6798b5
+	border-top: 8px solid #6798b5
 	font-size: 16px
 	color: #fff
 	+reforma
-	-webkit-transition: bottom 200ms, opacity 200ms linear
-	-o-transition: bottom 200ms, opacity 200ms linear
-	transition: bottom 200ms, opacity 200ms linear
+	-webkit-transition: bottom 200ms, opacity 200ms, border 200ms linear
+	-o-transition: bottom 200ms, opacity 200ms, border 200ms linear
+	transition: bottom 200ms, opacity 200ms, border 200ms linear
 	+opacity(1)
 	letter-spacing: 1px
 	text-transform: uppercase
@@ -25,6 +25,8 @@
 		bottom: -14px
 		left: 0
 		+arr(166, 14, #70b0dd, b)
+	&:hover
+		bottom: -40px	
 	&.is-open
 		background: #92caf1 	   
 		border-top: 4px solid #86aec6
@@ -50,10 +52,11 @@
 	+r(h900)
 		padding-top: 225px
 	&__places
-		position: relative
+		position: absolute
+		left: 50%
+		margin-left: -640px
 		height: 400px
 		width: 1280px
-		margin: 0 auto 
 		li
 			position: absolute
 			em
@@ -237,11 +240,15 @@
 		+clr
 	&__preview
 		position: relative
+		display: block
+		text-decoration: none
 		width: 386px
 		height: 225px
 		float: left
 		overflow: hidden
 		&:hover
+			.news__title
+				text-decoration: none
 			.news__img
 				+transform(scale(1.4))
 		+r(w1280)
@@ -316,8 +323,10 @@
 			padding: 0 22px
 			line-height: 1
 			background: #fff
-			span
+			a
 				display: inline-block
+				color: #231f20
+				text-decoration: none
 				border-bottom: 1px solid $orange
 	&__list
 		font-size: 0
@@ -366,9 +375,9 @@
 		font-size: 11px
 		text-transform: uppercase 
 		&:hover
+			bottom: -29px
 			background: darken($orange, 5%)
 		&:active
-			bottom: -27px
 			border-bottom: 2px solid #c9641a 
 .clients
 	padding: 42px 20px 

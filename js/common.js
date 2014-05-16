@@ -28,6 +28,13 @@ head.ready(function() {
 			return false;
 		});
 
+		$(".js-point").hover(
+			function(){},
+			function(){
+				$(".js-bounce").hide();
+			}
+		);
+
 	// promo switcher toggle
 		
 		function switcher(){
@@ -50,11 +57,11 @@ head.ready(function() {
 
 			if ($(window).scrollTop() >= (top - 55)) {
 				$(".js-categories").addClass('is-fixed');
-				news.addClass('is-fixed');
+				//news.addClass('is-fixed');
 			}
 			if ($(window).scrollTop() < (top2 - 55)) {
 				$(".js-categories").removeClass('is-fixed');
-				news.removeClass('is-fixed');
+				//news.removeClass('is-fixed');
 			}
 			if ($(window).scrollTop() >= (top - 206)) {
 				$(".js-fixedtop").addClass('is-scrolled').css('top', (top - 206));

@@ -142,8 +142,10 @@ $orange: #f47920
 .h2
 	+reforma
 	font-size: 28px
-	span
+	a
 		display: inline-block
+		color: #231f20
+		text-decoration: none
 		border-bottom: 1px solid $orange
 		line-height: 1 
 .heart
@@ -157,7 +159,7 @@ $orange: #f47920
 	left: 0
 	right: 0
 	height: 206px
-	z-index: 99
+	z-index: 100
 	.container
 		background: #fff 
 .fixedtop
@@ -180,7 +182,7 @@ $orange: #f47920
 	&__item
 		display: inline-block
 		vertical-align: middle
-		margin-left: 25px
+		margin-left: 20px
 		&:first-child	
 			margin-left: 0
 		a
@@ -216,27 +218,34 @@ $orange: #f47920
      
 .categories
 	position: relative
-	z-index: 2
+	min-width: 1024px
+	z-index: 100
 	+clr
 	&.is-fixed
 		position: fixed
 		top: 0
 	&__item
 		float: left
-		height: 55px
-		line-height: 55px
 		width: 386px      
 		text-align: center 
 		background: $orange
 		&:first-child
-			background: #dc6916
+			background: #fa6900
 		+r(w1280)
-			width: 341px 	 
+			width: 341px
+			&:first-child
+				width: 342px 	 
 		a
+			display: block
+			height: 55px
+			line-height: 55px
 			text-transform: uppercase
 			color: #fff
 			+agora_b
+			+transition(all 100ms)
 			text-decoration: none
+			&:hover
+				line-height: 60px
 		&.last
 			background: #fb842d
 
