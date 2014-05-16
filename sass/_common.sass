@@ -45,6 +45,8 @@ body
 	font-size: 14px 
 	font-family: 'PT Sans', sans-serif
 	line-height: 1.4
+	background: #222 url(../img/body-bg.png) 
+	
 //fonts
 +font(PFAgoraSansProBlack, pfagorasanspro-black)	
 =agora_b
@@ -61,6 +63,14 @@ $orange: #f47920
 	position: relative
 	background: url(../img/ill2-big.jpg) 50% 0 no-repeat
 	background-attachment: fixed
+	-webkit-transform-origin: 50% 50%
+	-moz-transform-origin: 50% 50%
+	-ms-transform-origin: 50% 50%
+	-o-transform-origin: 50% 50%
+	transform-origin: 50% 50%
+	+transition(0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940))
+	&.is-hidden
+		+transform(scale(0.95))
 	+r(h900)	
 		background-position: 50% -125px
 .container
@@ -340,5 +350,140 @@ $orange: #f47920
 			+s(flex)
 .jivosite
 	img
-		display: block			
+		display: block
+		
+// popup
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(#2d454a, 0.9)
+	z-index: 998
+	.lteie8 &
+		background: #2d454a 
+.popup
+	position: fixed
+	top: 170px
+	left: 50%
+	width: 960px
+	visibility: hidden
+	+opacity(0)
+	margin-left: -480px
+	z-index: 999
+	-webkit-transform-origin: 50% 50%
+	-moz-transform-origin: 50% 50%
+	-ms-transform-origin: 50% 50%
+	-o-transform-origin: 50% 50%
+	transform-origin: 50% 50%
+	+transform(scale(0.8))
+	+transition(0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940))
+	&__inner
+		background: #fff 	
+	&__close
+		position: absolute
+		top: -30px
+		right: 20px
+		color: #fff
+		cursor: pointer
+		&:before
+			content: ""
+			position: absolute
+			top: 2px
+			right: -20px
+			+s(close)
+	&.is-open
+		+opacity(1)
+		visibility: visible
+		+transform(scale(1))				  
+.route
+	background: #fafdff
+	text-align: center
+	padding: 24px 0
+	border-top: 1px dashed #b0b0b0
+	border-bottom: 1px dashed #b0b0b0  
+	li
+		display: inline-block
+		vertical-align: middle
+		margin: 0 7px 
+	&__point
+		font-size: 18px
+		font-weight: bold
+		color: #231f20
+	&__km
+		font-size: 18px
+		color: $orange
+	&__divide
+		width: 135px
+		height: 0
+		border-bottom: 1px dashed $orange
+		margin: 7px 0 13px
+	&__hint
+		font-size: 12px
+		color: #969696
+.map
+	position: relative
+	&__content
+		height: 450px
+	&__title
+		position: absolute
+		top: 70px
+		right: 52px
+		width: 266px
+		padding: 43px 39px 60px  
+		background: #fff
+		+box-shadow(5px 8px 29px rgba(0,0,1,.16))
+		z-index: 1
+		a
+			color: $orange
+			&:hover
+				text-decoration: none
+	&__adress
+		font-size: 18px
+		font-weight: bold
+		color: $orange
+		margin-bottom: 15px
+	&__gps
+		margin-bottom: 30px
+		text-transform: uppercase
+		font-size: 14px
+		color: #474747
+	&__text
+		margin-bottom: 30px
+.feedback
+	background: #fff
+	padding: 80px 0 100px 			
+	&__inner
+		border-top: 1px dashed #b0b0b0
+		border-bottom: 1px dashed #b0b0b0
+		padding: 30px 38px 
+		background: #fafdff
+		margin-bottom: 44px 
+	&__list
+		text-align: center
+		font-size: 0
+		li
+			display: inline-block
+			margin: 0 20px
+			color: $orange
+			font-weight: bold
+			font-size: 18px 
+	&__phone
+		+reforma
+		color: #231f20
+		font-size: 36px
+		font-weight: normal
+	&__bottom
+		text-align: center	 	
+	&__mail
+		font-size: 30px
+		font-weight: bold
+		letter-spacing: 1px
+		color: $orange
+		
+			 		  	
+
+		
+		 
 	

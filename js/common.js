@@ -82,13 +82,75 @@ head.ready(function() {
         	return false; 
 		});
 
+	// yandex map
+    	
+    	ymaps.ready(function () {
+    		var myMap = new ymaps.Map('YMapsID', {
+    		    center: [55.733835, 37.588227],
+    		    zoom: 12,
+    		    controls: []
+    		}),
+	
+        	// Создаем метку с помощью вспомогательного класса.
+        	myPlacemark1 = new ymaps.Placemark([55.733835, 37.588227], {
+        	    // Свойства.
+        	    // Содержимое иконки, балуна и хинта.
+        	    iconContent: '1',
+        	    balloonContent: 'Балун',
+        	    hintContent: 'Стандартный значок метки'
+        	}, {
+        	    // Опции.
+        	    // Стандартная фиолетовая иконка.
+        	    preset: 'twirl#violetIcon'
+        	});
+	
+     		myMap.geoObjects
+        		.add(myPlacemark1)
+
+    	});
+
+    // popup init
+    
+    	$(".js-overlay").hide();
+    	//$(".js-popup").hide();	
+
+    	$(".js-popup-map-btn").on('click', function(event){
+    		$(".js-overlay").show();
+    		$(".js-popup-map").addClass('is-open');
+    		$(".out").addClass('is-hidden');
+    		event.stopPropagation();
+			return false;
+    	});
+    	$(".js-popup-feedback-btn").on('click', function(event){
+    		$(".js-overlay").show();
+    		$(".js-popup-feedback").addClass('is-open');
+    		$(".out").addClass('is-hidden');
+    		event.stopPropagation();
+			return false;
+    	});
+
+    	$(".js-popup-close").on('click', function(){
+    		$(".js-overlay").hide();
+    		$(".js-popup").removeClass('is-open');
+    		$(".out").removeClass('is-hidden');
+    	});
+
+    	$(".js-popup").on('click', function(event){
+    		event.stopPropagation();
+    	});
+
+
+
 		$(window).scroll(function(){
     	   	sticky();
     	   	switcher();
     	});
 
 		$(document).click(function(){
-			$(".js-bounce").hide();		
+			$(".js-bounce").hide();
+			$(".js-overlay").hide();
+    		$(".js-popup").removeClass('is-open');
+    		$(".out").removeClass('is-hidden');	
 		});
 
 		$(window).resize(function(){

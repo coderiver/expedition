@@ -17,8 +17,8 @@
 	<header class="header">
 		<div class="fixedtop js-fixedtop">
 			<div class="wrapper">
-				<a href="#" class="popup-map"><span>Карта проезда</span></a>
-				<a href="#" class="popup-feedback"><span>Связаться с нами</span></a>
+				<a href="#" class="popup-map js-popup-map-btn"><span>Карта проезда</span></a>
+				<a href="#" class="popup-feedback js-popup-feedback-btn"><span>Связаться с нами</span></a>
 				<nav class="main-menu">
 					<ul class="main-menu__list">
 						<li class="main-menu__item"><a href="#" class="is-active"><span>Главная</span></a></li>
@@ -243,6 +243,7 @@
 			</div>
 			<div class="cycle-slideshow"
 			data-cycle-fx = 'carousel'
+			data-cycle-timeout=6000
 			data-cycle-carousel-visible = 1
 			data-cycle-slides = "> div"
 			data-cycle-prev=".news__next"
@@ -452,6 +453,85 @@
 </div>
 <!-- END out-->
 
+<!-- BEGIN popup -->
+<div class="overlay js-overlay"></div>
+<div class="popup js-popup js-popup-map">
+	<div class="popup__close js-popup-close">Закрыть</div>
+	<div class="popup__inner">
+		<ul class="route">
+			<li>
+				<div class="route__point">МКАД</div>
+			</li>
+			<li>
+				<div class="route__distance">
+					<div class="route__km">55,3км</div>
+					<div class="route__divide"></div>
+					<div class="route__hint">от Мкад по прямой</div>
+				</div>
+			</li>
+			<li>
+				<div class="route__point">Плещиницы</div>
+			</li>
+			<li>
+				<div class="route__distance">
+					<div class="route__km">6км</div>
+					<div class="route__divide"></div>
+					<div class="route__hint">от Плещиниц налево</div>
+				</div>
+			</li>
+			<li>
+				<div class="route__point">Октябрь</div>
+			</li>
+			<li>
+				<div class="route__distance">
+					<div class="route__km">1,9км</div>
+					<div class="route__divide"></div>
+					<div class="route__hint">от д. Октябрь направо</div>
+				</div>
+			</li>
+			<li>
+				<div class="route__point">Пикник-отель</div>
+			</li>
+		</ul>
+		<div class="map">
+			<div class="map__title">
+				<div class="map__adress">Минская обл, Логойский р-н, деревня Октябрь, база отдыха Пикник-отель Экспедиция</div>
+				<div class="map__gps">GPS: N54˚26"605’ E27˚46"051’</div>
+				<div class="map__text">Режим работы - круглосуточно, ежедневно, круглогодично!</div>
+				<a href="mailto:info@piknik-expedition.by">info@piknik-expedition.by</a>
+			</div>
+			<div class="map__content" id="YMapsID"></div>
+		</div>
+	</div>
+</div>
+<div class="popup js-popup js-popup-feedback">
+	<div class="popup__close js-popup-close">Закрыть</div>
+	<div class="feedback">
+		<h1 class="h1">Ответим на ваши вопросы</h1>
+		<div class="feedback__inner">
+			<ul class="feedback__list">
+				<li>
+					<div class="feedback__phone">+375 (44) 558-2-555</div>
+					<div>Инна Масловская</div>
+				</li>
+				<li>
+					<div class="feedback__phone">+375 (44) 558-3-555</div>
+					<div>Светлана Букреева</div>
+				</li>
+				<li>
+					<div class="feedback__phone">+375 (44) 549-92-39</div>
+					<div>Анастасия Шарлай</div>
+				</li>
+			</ul>
+		</div>
+		<div class="feedback__bottom">
+			<a href="mailto:info@piknik-expedition.by" class="feedback__mail">info@piknik-expedition.by</a>
+		</div>
+	</div>
+</div>
+
+<!-- END popup -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+<script src="http://api-maps.yandex.ru/2.1-dev/?lang=ru-RU&load=package.full" type="text/javascript"></script>
 </body>
 </html>
