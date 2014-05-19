@@ -71,7 +71,10 @@ head.ready(function() {
 			}
 
 		}
-		sticky();
+		if ($(".js-news").length) {
+			sticky();
+		};
+		
 
 	// scrolltop
 
@@ -139,10 +142,21 @@ head.ready(function() {
     		event.stopPropagation();
     	});
 
+    // slick
+    	
+    	$('.js-slider').slick({
+		  centerMode: true,
+		  centerPadding: '0px',
+		  slidesToShow: 3,
+		  arrows: false,
+		  slidesToScroll: 1
+		});	
 
 
 		$(window).scroll(function(){
-    	   	sticky();
+    	   	if ($(".js-news").length) {
+				sticky();
+			};
     	   	switcher();
     	});
 

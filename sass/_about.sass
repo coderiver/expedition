@@ -1,0 +1,94 @@
+// about page styles
+.breadcrumbs
+    padding-bottom: 50px 
+    text-align: center
+    ul
+        font-size: 0
+    &__item
+        position: relative
+        display: inline-block
+        margin: 0 14px
+        font-size: 14px
+        &:before
+            content: ""
+            position: absolute
+            top: 7px
+            left: -15px
+            width: 4px
+            height: 4px
+            border-radius: 4px
+            background: #cfcfcf
+        &:first-child
+            &:before
+                display: none      
+        a
+            color: $orange
+            font-size: 14px
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+.submenu
+    text-align: center
+    margin-bottom: 50px 
+    &__list
+        display: inline-block
+        font-size: 0
+        text-align: center
+        border: 3px solid #231f20
+    &__item
+        display: inline-block
+        margin: 0 17px 
+        font-size: 14px
+        a
+            display: inline-block
+            height: 43px
+            line-height: 43px
+            +agora_b
+            color: #231f20
+            text-transform: uppercase
+            text-decoration: none
+            &.is-active
+                color: $orange
+.article
+    padding: 0 10% 
+    &__text
+        margin-bottom: 55px
+        text-align: center
+        font-size: 14px
+        color: #474747
+        line-height: 1.6 
+    &__leading
+        margin-bottom: 5px
+        font-weight: bold
+        font-size: 18px
+.gallery
+    position: relative
+    overflow: hidden
+    height: 427px
+    &:before
+        content: ""
+        position: absolute
+        top: 0px
+        left: 0px
+        bottom: 0px
+        width: 260px
+        background: rgba(#fff, 0.7)
+        z-index: 2
+    &:after
+        content: ""
+        position: absolute
+        top: 0px
+        right: 0px
+        bottom: 0px
+        width: 260px
+        background: rgba(#fff, 0.7)
+        z-index: 2       
+.slider
+    position: relative
+    margin-left: -379px
+    height: 427px 
+    width: 1917px                     
+.e-pict
+    padding: 60px 0 
+    text-align: center                               
+             
