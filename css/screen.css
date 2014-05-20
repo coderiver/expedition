@@ -331,3 +331,14 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 .history__item img { margin-top: 50px; float: left; margin-right: 30px; margin-bottom: 30px; }
 .history__item.long { width: 93%; }
 .history__year { font-size: 36px; color: #ff7a08; }
+
+.we__title { text-align: center; font-family: "ReformaGroteskDemiCRegular", sans-serif; font-size: 28px; margin-bottom: 45px; color: #ff7a08; text-transform: uppercase; }
+.we__list { font-size: 0; text-align: center; }
+.we__item { display: inline-block; vertical-align: top; width: 250px; margin: 0 30px 20px; font-size: 14px; text-align: center; color: #454545; }
+.we__item a { color: #ff7a08; }
+.we__item a:hover { text-decoration: none; }
+.we__img { display: inline-block; width: 145px; height: 145px; margin-bottom: 40px; border-radius: 50%; background: #a3a3a3; overflow: hidden; text-align: center; }
+.we__img img { display: inline-block; min-width: 100%; min-height: 100%; }
+.we__name { margin-bottom: 25px; font-size: 18px; font-weight: bold; color: #ff7a08; }
+.we__text { margin-bottom: 20px; }
+.we__phone { color: #1f191a; font-weight: bold; }
