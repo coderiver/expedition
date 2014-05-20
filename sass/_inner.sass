@@ -243,7 +243,66 @@
         text-transform: uppercase
         font-weight: bold
         color: #fff
+        
+// sertificate page styles
 
+.sertificate
+    width: 940px 
+    margin: 0 auto
+    overflow: hidden
+    +r(w1280)
+        margin: 0 0 0 -54px 
+    &__inner
+        +clr
+        margin-left: -37px
+        margin-top: -37px
+    &__item
+        position: relative
+        float: left
+        width: 450px
+        height: 213px     
+        padding-top: 33px
+        padding-left: 37px
+        margin-bottom: 33px 
+        border-top: 2px solid #dbe4e6
+        &:hover
+            .sertificate__link
+                +transform(scale(1))
+                +opacity(1)
+    &__img
+        position: absolute
+        top: 37px
+        left: 37px
+        right: 0px
+        bottom: 0px
+        font-size: 0
+        img
+            width: 100%
+            height: 100%
+    &__link
+        position: absolute
+        top: 37px
+        left: 37px
+        right: 0px
+        bottom: 0px
+        padding-top: 60px 
+        +transition(all 300ms linear)
+        +transform(scale(0))
+        +opacity(0)
+        text-decoration: none
+        background: rgba(#ff7908, .9)
+    &__title
+        text-align: center
+        text-transform: uppercase
+        color: #fff
+        line-height: 1.6
+        font-weight: bold
+        margin-bottom: 30px                    
+    &__price
+        text-align: center
+        font-size: 30px
+        color: #fcc6a7 
+        font-weight: normal
             
                 
                                                
