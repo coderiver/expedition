@@ -189,6 +189,61 @@
     &__phone
         color: #1f191a
         font-weight: bold
+        
+// clients page styles
+
+.client-list
+    .h2
+        padding-bottom: 0
+        &:before
+            display: none
+    &__item
+        position: relative
+        display: inline-block
+        width: 182px
+        height: 182px
+        margin: 0 25px
+        +r(w1280)
+            margin: 0 10px  
+        &:hover
+            .client-list__hover
+                +transform(scale(1))
+                +opacity(1)
+    &__img
+        position: absolute
+        top: 0px
+        left: 0px
+        right: 0px
+        bottom: 0px
+        text-align: center
+        &:before
+            content: ""
+            display: inline-block
+            width: 0
+            height: 100%
+            vertical-align: middle  
+        img
+            display: inline-block
+            vertical-align: middle
+    &__hover
+        position: absolute
+        top: 0px
+        left: 0px
+        right: 0px
+        bottom: 0px
+        padding-top: 70px 
+        font-size: 0
+        text-align: center
+        text-decoration: none
+        background: rgba(#ff7908, .9)
+        +transition(all 200ms linear)
+        +transform(scale(0))
+        +opacity(0)
+        font-size: 14px
+        text-transform: uppercase
+        font-weight: bold
+        color: #fff
+
             
                 
                                                

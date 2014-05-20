@@ -342,3 +342,13 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 .we__name { margin-bottom: 25px; font-size: 18px; font-weight: bold; color: #ff7a08; }
 .we__text { margin-bottom: 20px; }
 .we__phone { color: #1f191a; font-weight: bold; }
+
+.client-list .h2 { padding-bottom: 0; }
+.client-list .h2:before { display: none; }
+.client-list__item { position: relative; display: inline-block; width: 182px; height: 182px; margin: 0 25px; }
+@media only screen and (max-width: 1280px) { .client-list__item { margin: 0 10px; } }
+.client-list__item:hover .client-list__hover { -moz-transform: scale(1); -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.client-list__img { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; text-align: center; }
+.client-list__img:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
+.client-list__img img { display: inline-block; vertical-align: middle; }
+.client-list__hover { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; padding-top: 70px; font-size: 0; text-align: center; text-decoration: none; background: rgba(255, 121, 8, 0.9); -moz-transition: all 200ms linear; -o-transition: all 200ms linear; -webkit-transition: all 200ms linear; transition: all 200ms linear; -moz-transform: scale(0); -ms-transform: scale(0); -webkit-transform: scale(0); transform: scale(0); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; font-size: 14px; text-transform: uppercase; font-weight: bold; color: white; }
