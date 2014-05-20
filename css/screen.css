@@ -31,6 +31,8 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 .container.container_index { padding-top: 0; margin-top: -142px; }
 @media only screen and (max-width: 1280px) { .container { width: 1024px; overflow: hidden; } }
 
+.content { padding: 0 100px; }
+
 .wrapper { position: relative; width: 960px; margin: 0 auto; }
 
 .popup-map { position: absolute; top: 29px; left: 0; border: 1px solid #ebeff1; height: 28px; padding: 10px 16px 0 49px; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; font-size: 14px; color: #f47920; }
@@ -237,16 +239,18 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 .benefits { padding: 78px 100px 105px; }
 .benefits__text { margin-bottom: 85px; letter-spacing: 0.5px; text-align: center; line-height: 1.8; }
 
-.about { position: relative; border: 2px solid #fec446; padding: 28px 20px 64px; }
+.about { position: relative; border: 2px solid #fec446; padding: 28px 20px 14px; }
 .about__title { position: relative; top: -48px; text-align: center; font-family: "ReformaGroteskDemiCRegular", sans-serif; color: #231f20; font-size: 28px; text-transform: uppercase; }
 .about__title p { display: inline-block; padding: 0 22px; line-height: 1; background: white; }
 .about__title p a { display: inline-block; color: #231f20; text-decoration: none; border-bottom: 1px solid #f47920; }
 .about__list { font-size: 0; line-height: 1; text-align: center; }
-.about__item { display: inline-block; width: 150px; margin: 0 10px; vertical-align: top; font-size: 16px; text-transform: uppercase; font-family: "ReformaGroteskDemiCRegular", sans-serif; line-height: 1.4; }
+.about__item { display: inline-block; width: 150px; margin: 0 10px 50px; vertical-align: top; font-size: 16px; text-transform: uppercase; font-family: "ReformaGroteskDemiCRegular", sans-serif; line-height: 1.4; }
+@media only screen and (max-width: 1280px) { .about__item { margin: 0 0 50px; } }
 .about__item.violet p { color: #727ebd; }
 .about__item.green p { color: #a4d062; }
 .about__item.yellow p { color: #fec446; }
 .about__item.pink p { color: #f37f93; }
+.about__item.blue p { color: #75a7d9; }
 .about__img { margin-bottom: 20px; height: 80px; font-size: 0; }
 .about__more { position: absolute; bottom: -25px; left: 50%; width: 225px; height: 51px; line-height: 51px; margin-left: -112px; background: #f47920; border-bottom: 4px solid #c9641a; -moz-transition: all 150ms linear; -o-transition: all 150ms linear; -webkit-transition: all 150ms linear; transition: all 150ms linear; text-align: center; color: white; text-decoration: none; font-family: "PFAgoraSansProBlack", sans-serif; font-size: 11px; text-transform: uppercase; }
 .about__more:hover { bottom: -29px; background: #ef6b0c; }
@@ -308,3 +312,15 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 .slider { position: relative; margin-left: -379px; height: 427px; width: 1917px; }
 
 .e-pict { padding: 60px 0; text-align: center; }
+
+.hentry__block { line-height: 1.6; color: #474747; margin-bottom: 75px; }
+.hentry__block img { float: left; margin-right: 40px; margin-bottom: 40px; }
+.hentry__block p { margin-bottom: 15px; }
+.hentry__leading { font-size: 18px; font-weight: bold; line-height: 1.4; margin-bottom: 20px; }
+
+.cols { *zoom: 1; }
+.cols:after { content: " "; display: table; clear: both; }
+
+.col40 { width: 40%; padding-right: 5%; float: left; }
+
+.col60 { width: 50%; padding-right: 5%; float: left; }

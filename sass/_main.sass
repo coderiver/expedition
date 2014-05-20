@@ -310,7 +310,7 @@
 .about
 	position: relative
 	border: 2px solid #fec446
-	padding: 28px 20px 64px
+	padding: 28px 20px 14px
 	&__title
 		position: relative
 		top: -48px
@@ -336,12 +336,14 @@
 	&__item
 		display: inline-block
 		width: 150px
-		margin: 0 10px
+		margin: 0 10px 50px
 		vertical-align: top
 		font-size: 16px
 		text-transform: uppercase
 		+reforma
 		line-height: 1.4
+		+r(w1280)
+			margin: 0 0 50px 
 		&.violet
 			p
 				color: #727ebd
@@ -353,7 +355,10 @@
 				color: #fec446
 		&.pink
 			p
-				color: #f37f93						
+				color: #f37f93
+		&.blue
+			p
+				color: #75a7d9								
 	&__img
 		margin-bottom: 20px
 		height: 80px
@@ -379,7 +384,7 @@
 			bottom: -29px
 			background: darken($orange, 5%)
 		&:active
-			border-bottom: 2px solid #c9641a 
+			border-bottom: 2px solid #c9641a		 
 .clients
 	padding: 42px 20px 
 	border-top: 1px dashed #b0b0b0
