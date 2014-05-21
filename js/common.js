@@ -157,10 +157,25 @@ head.ready(function() {
 			return false;
     	});
 
+    	function comm(){
+    		var top = ($(window).scrollTop() + 100);
+    		$(".js-popup-comment-btn").on('click', function(event){
+    			$(".js-overlay").show();
+    			$(".js-popup-comment").addClass('is-open').css('top', top);
+    			$(".out").addClass('is-hidden');
+    			event.stopPropagation();
+				return false;
+
+    		});
+    	}
+    	comm();
+    	
+
     	$(".js-popup-close").on('click', function(){
     		$(".js-overlay").hide();
     		$(".js-popup").removeClass('is-open');
     		$(".out").removeClass('is-hidden');
+    		$(".js-popup-comment").removeClass('is-open').css('top', 170);
     	});
 
     	$(".js-popup").on('click', function(event){
@@ -181,6 +196,9 @@ head.ready(function() {
 		$(window).scroll(function(){
     	   	if ($(".js-news").length) {
 				sticky();
+			};
+			if ($(".comm").length) {
+				comm();
 			};
 			if ($(".js-categories2").length) {
 				sticky_inner();
