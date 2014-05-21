@@ -250,12 +250,29 @@ $orange: #ff7a08
 		+r(w1280)
 			margin-left: -512px	
 	&__item
+		position: relative
 		float: left
 		width: 386px      
 		text-align: center 
 		background: $orange
+		&.is-active
+			&:before
+				content: ""
+				position: absolute
+				bottom: -9px
+				left: 50%
+				margin-left: -10px
+				+arr(20, 9, $orange, b)
 		&:first-child
 			background: #fa6900
+			&.is-active
+				&:before
+					content: ""
+					position: absolute
+					bottom: -9px
+					left: 50%
+					margin-left: -10px
+					+arr(20, 9, #fa6900, b) 
 		+r(w1280)
 			width: 341px
 			&:first-child
@@ -273,6 +290,15 @@ $orange: #ff7a08
 				line-height: 60px
 		&.last
 			background: #fb842d
+			&.is-active
+				&:before
+					content: ""
+					position: absolute
+					bottom: -9px
+					left: 50%
+					margin-left: -10px
+					+arr(20, 9, #fb842d, b)
+			
 
 // footer
 .footer

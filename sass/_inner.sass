@@ -262,23 +262,28 @@
         +clr
         margin-left: -37px
         margin-top: -37px
+        font-size: 0
     &__item
         position: relative
-        float: left
-        width: 450px
-        height: 213px     
+        display: inline-block
+        vertical-align: top
+        width: 450px    
         padding-top: 33px
         padding-left: 37px
         margin-bottom: 33px 
         border-top: 2px solid #dbe4e6
+        font-size: 14px
         &:hover
             .sertificate__link
                 +transform(scale(1))
                 +opacity(1)
+    &__topper
+        position: relative
+        height: 213px              
     &__img
         position: absolute
-        top: 37px
-        left: 37px
+        top: 0px
+        left: 0px
         right: 0px
         bottom: 0px
         font-size: 0
@@ -287,8 +292,8 @@
             height: 100%
     &__link
         position: absolute
-        top: 37px
-        left: 37px
+        top: 0px
+        left: 0px
         right: 0px
         bottom: 0px
         padding-top: 60px 
@@ -309,6 +314,24 @@
         font-size: 30px
         color: #fcc6a7 
         font-weight: normal
+    &.sertificate_serv
+        .sertificate__link
+            padding-top: 100px
+        .sertificate__topper
+            margin-bottom: 25px
+    &__content
+        a
+            display: inline-block
+            margin-bottom: 15px
+            font-size: 18px
+            font-weight: bold
+            color: $orange
+            &:hover
+                text-decoration: none
+        p
+            color: #454545
+            font-size: 14px
+            line-height: 1.7                        
         
 // news page styles
 
