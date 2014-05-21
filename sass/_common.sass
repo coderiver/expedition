@@ -233,12 +233,22 @@ $orange: #ff7a08
      
 .categories
 	position: relative
-	min-width: 1024px
+	width: 1158px
+	margin: 0 auto 
 	z-index: 100
 	+clr
+	+r(w1280)
+		width: 1024px 
 	&.is-fixed
 		position: fixed
 		top: 0
+	&.is-fixed2
+		position: fixed
+		top: 0
+		left: 50%
+		margin-left: -579px
+		+r(w1280)
+			margin-left: -512px	
 	&__item
 		float: left
 		width: 386px      
