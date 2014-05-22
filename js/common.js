@@ -205,6 +205,24 @@ head.ready(function() {
 			slider();
     	}
     	
+    // fancybox
+
+    	if ($(".fancybox").length) {
+    	    $(".fancybox").fancybox({
+    	        openEffect  : 'none',
+    	        closeEffect : 'none',
+    	        nextEffect : 'fade',
+    	        prevEffect : 'fade',
+    	        padding : 60,
+    	        scrolling: 'no',
+    	        autoResize: true,
+    	        helpers: {
+    	          overlay: {
+    	            locked: false
+    	          }
+    	        }
+    	    });
+    	};
 
 		$(window).scroll(function(){
     	   	if ($(".js-news").length) {

@@ -412,22 +412,55 @@
 // news page styles
 
 .news-list
-    +clr
-    margin-left: -3%
+    font-size: 0
+    margin-left: -58px
     &__item
-        float: left
-        width: 47%
+        display: inline-block
+        vertical-align: top
+        width: 450px
         margin-bottom: 60px
-        margin-left: 3%
+        margin-left: 55px
+        +r(w1280)
+            width: 380px
         p
             line-height: 1.7
             margin-bottom: 20px         
-    &__img
-        display: block
-        font-size: 0
+    &__topper
+        position: relative
         margin-bottom: 25px
+        &:hover
+            .news-list__mask
+                +transform(scale(1))
+                +opacity(1)                 
+    &__img
+        position: relative 
+        height: 214px
+        font-size: 0
+        z-index: 2
+        +r(w1280)
+            height: 180px
         img
             width: 100%
+            height: 100%
+    &__mask
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        padding-top: 90px 
+        text-decoration: none
+        text-align: center
+        text-transform: uppercase
+        color: #fff
+        line-height: 1.6
+        font-size: 14px
+        font-weight: bold
+        background: rgba(255, 121, 8, 0.9)
+        +transition(all 300ms linear)
+        +transform(scale(0))
+        +opacity(0)
+        z-index: 2          
     &__link
         display: block
         margin-bottom: 10px
