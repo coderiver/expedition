@@ -31,7 +31,7 @@ head.ready(function() {
 		$(".js-point").hover(
 			function(){},
 			function(){
-				$(".js-bounce").hide();
+				$(".js-bounce").hide( "bounce", { times: 2, distance: 20 }, "slow" );
 			}
 		);
 
@@ -188,10 +188,23 @@ head.ready(function() {
 		  centerMode: true,
 		  centerPadding: '0px',
 		  slidesToShow: 3,
-		  arrows: false,
 		  slidesToScroll: 1
 		});	
 
+    // cycle reinit
+    
+    	function slider(){
+    		if ($(window).width() <= 1280) {
+    			$('.cycle-slideshow').cycle('reinit');
+    		}
+    		else{
+    			$('.cycle-slideshow').cycle('reinit');
+    		}
+    	}	
+    	if ($(".js-news").length) {
+			slider();
+    	}
+    	
 
 		$(window).scroll(function(){
     	   	if ($(".js-news").length) {
@@ -218,6 +231,9 @@ head.ready(function() {
 
 		$(window).resize(function(){
 			promo();
+			if ($(".js-news").length) {
+				slider();
+    		}
 		});
 
 });

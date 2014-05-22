@@ -29,6 +29,7 @@
                 text-decoration: underline
 .submenu
     text-align: center
+    height: 49px
     margin-bottom: 50px
     &__list
         display: inline-block
@@ -44,15 +45,21 @@
     &__item
         display: inline-block
         margin: 0 17px 
-        font-size: 14px
+        font-size: 0
         a
             display: inline-block
             height: 43px
+            overflow: hidden
             line-height: 43px
             +agora_b
+            font-size: 14px
             color: #231f20
             text-transform: uppercase
             text-decoration: none
+            +transition(all 150ms)
+            &:hover
+                color: $orange
+                line-height: 46px
             &.is-active
                 color: $orange
 .article
@@ -71,30 +78,34 @@
     position: relative
     overflow: hidden
     height: 427px
-    margin-bottom: 40px
-    &:before
-        content: ""
-        position: absolute
-        top: 0px
-        left: 0px
-        bottom: 0px
-        width: 260px
-        background: rgba(#fff, 0.7)
-        z-index: 2
-    &:after
-        content: ""
-        position: absolute
-        top: 0px
-        right: 0px
-        bottom: 0px
-        width: 260px
-        background: rgba(#fff, 0.7)
-        z-index: 2       
+    margin-bottom: 40px              
 .slider
     position: relative
     margin-left: -379px
     height: 427px 
-    width: 1917px                     
+    width: 1917px
+    +r(w1280)
+        margin-left: -446px
+.slick-prev
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 50%
+    width: 260px
+    margin-left: -579px
+    background: rgba(#fff, 0.7)
+    z-index: 2
+    +hide-text
+.slick-next
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 50%
+    width: 260px
+    margin-left: 319px
+    background: rgba(#fff, 0.7)
+    z-index: 2
+    +hide-text
 .e-pict
     padding: 16px 0 60px 
     text-align: center

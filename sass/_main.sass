@@ -6,9 +6,10 @@
 	left: 50%
 	width: 166px
 	height: 40px
+	padding-top: 5px
 	margin-left: -83px
-	background: #70b0dd
-	border-top: 8px solid #6798b5
+	background: #40b2e0
+	border-top: 8px solid #3c99b6
 	font-size: 16px
 	color: #fff
 	+reforma
@@ -24,16 +25,16 @@
 		position: absolute
 		bottom: -14px
 		left: 0
-		+arr(166, 14, #70b0dd, b)
+		+arr(166, 14, #40b2e0, b)
 		+transform(rotate(0.001deg))
 	&:hover
 		bottom: -40px	
 	&.is-open
-		background: #92caf1 	   
-		border-top: 4px solid #86aec6
+		background: #72cbf3 	   
+		border-top: 8px solid #6bafc6
 		&:before
 			content: ""
-			+arr(166, 14, #92caf1, b)
+			+arr(166, 14, #72cbf3, b)
 	&.is-hidden
 		+opacity(0)
 		bottom: 0		
@@ -72,18 +73,11 @@
 	&__point
 		position: relative
 		display: block
-		width: 23px
-		height: 23px
+		width: 10px
+		height: 10px
 		+border-radius(50%)
 		background: #fff
 		cursor: pointer
-		&:before
-			content: "+"
-			position: absolute
-			top: 0px
-			left: 7px
-			font-size: 16px
-			color: $orange
 		&:hover
 			background: $orange
 			&:before
@@ -249,7 +243,7 @@
 		overflow: hidden
 		&:hover
 			.news__title
-				text-decoration: none
+				border-bottom: none 
 			.news__img
 				+transform(scale(1.4))
 		+r(w1280)
@@ -273,13 +267,15 @@
 		&.green
 			background: rgba(#19bb9b, .9)
 	&__title
+		display: inline-block
 		+reforma
 		font-size: 20px
 		text-transform: uppercase
-		text-decoration: underline
+		line-height: 1
 		letter-spacing: 1px
 		white-space: normal
 		margin-bottom: 28px
+		border-bottom: 1px solid #fff 
 	&__text
 		white-space: normal
 		height: 78px
@@ -330,6 +326,10 @@
 				color: #231f20
 				text-decoration: none
 				border-bottom: 1px solid $orange
+				+transition(all 150ms linear)
+				&:hover
+					color: $orange
+					border-bottom: 1px solid #fff
 	&__list
 		font-size: 0
 		line-height: 1
@@ -388,7 +388,7 @@
 		&:active
 			border-bottom: 2px solid #c9641a		 
 .clients
-	padding: 42px 20px 
+	padding: 42px 20px
 	border-top: 1px dashed #b0b0b0
 	border-bottom: 1px dashed #b0b0b0 			
 	background: #fafdff
@@ -402,6 +402,8 @@
 		line-height: 140px
 		vertical-align: middle
 		text-align: center
+		+r(w1280)
+			width: 984px
 		img
 			display: inline-block
 			vertical-align: middle
@@ -513,3 +515,4 @@
 		margin: -13px 0 0 -13px
 		+s(tw)		
 						 
+

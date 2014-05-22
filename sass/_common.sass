@@ -45,6 +45,7 @@ body
 	font-size: 14px 
 	font-family: 'PT Sans', sans-serif
 	line-height: 1.4
+	letter-spacing: 1px 
 	background: #222 url(../img/body-bg.png) 
 	
 //fonts
@@ -61,7 +62,7 @@ $orange: #ff7a08
 // common blocks 
 .out
 	position: relative
-	background: url(../img/ill2-big2.jpg) 50% 0 no-repeat
+	background: url(../img/ill2-big.jpg) 50% 0 no-repeat
 	background-attachment: fixed
 	-webkit-transform-origin: 50% 50%
 	-moz-transform-origin: 50% 50%
@@ -107,12 +108,34 @@ $orange: #ff7a08
 	&:hover
 		span
 			border-bottom: none
-	&:before
-		content: ""
+.popup-map, .popup-feedback					
+	.coin
 		position: absolute
 		top: 2px
 		left: 2px
-		+s(marker)
+		width: 34px
+		height: 34px
+		+perspective(800px)
+		&__inner
+			position: absolute
+			width: 100%
+			height: 100%
+			+transition(all .2s linear)
+			+transform-style(preserve-3d)
+			+gpu
+		&__front
+			position: absolute
+			+s(marker)
+			+backface-visibility(hidden)
+		&__back
+			position: absolute
+			+s(marker) 
+			+backface-visibility(hidden)
+			+rotateY(180deg)
+	&:hover
+		.coin
+			&__inner
+				+rotateY(180deg)			
 .popup-feedback
 	position: absolute	
 	top: 29px
@@ -128,13 +151,12 @@ $orange: #ff7a08
 		border-bottom: 1px dotted
 	&:hover
 		span
-			border-bottom: none 	
-	&:before
-		content: ""
-		position: absolute
-		top: 2px
-		left: 2px
-		+s(feedback)
+			border-bottom: none	 	
+	.coin
+		&__front
+			+s(feedback)
+		&__back
+			+s(feedback)
 .h1, .h2
 	position: relative
 	font-size: 34px
@@ -162,7 +184,11 @@ $orange: #ff7a08
 		color: #231f20
 		text-decoration: none
 		border-bottom: 1px solid $orange
-		line-height: 1 
+		line-height: 1
+		+transition(all 150ms)
+		&:hover
+			color: $orange
+			border-bottom: 1px solid #fff 
 .heart
 	display: inline-block
 	+s(heart)	
@@ -210,11 +236,14 @@ $orange: #ff7a08
 			+reforma
 			text-transform: uppercase
 			text-decoration: none
+			+transition(color 100ms linear)
 			span
+				+transition(all 150ms linear)
 				border-bottom: 1px solid $orange
 			&:hover
+				color: $orange
 				span
-					border-bottom: none 	 
+					border-bottom: 1px solid #fff 	 
 			&.is-active
 				color: $orange
 				border: 2px solid $orange
@@ -341,7 +370,7 @@ $orange: #ff7a08
 		height: 30px
 		padding: 0 26px 0 16px 
 		border-radius: 15px
-		background: #db690d
+		background: #e8680f
 		+transition(background 150ms)
 		color: #fff
 		+placeholder
@@ -349,7 +378,7 @@ $orange: #ff7a08
 			font-family: 'PT Sans', sans-serif
 			font-size: 12px
 		&:focus
-			background: darken(#cd6820, 5%) 	
+			background: darken(#e8680f, 5%) 	
 	button
 		position: absolute
 		top: 8px
