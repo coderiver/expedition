@@ -33,6 +33,7 @@
     margin-bottom: 50px
     &__list
         display: inline-block
+        vertical-align: top
         font-size: 0
         text-align: center
         border: 3px solid #231f20
@@ -47,7 +48,7 @@
         margin: 0 17px 
         font-size: 0
         a
-            display: inline-block
+            display: block
             height: 43px
             overflow: hidden
             line-height: 43px
@@ -56,10 +57,10 @@
             color: #231f20
             text-transform: uppercase
             text-decoration: none
-            +transition(all 150ms)
+            +transition(all 150ms linear)
             &:hover
                 color: $orange
-                line-height: 46px
+                line-height: 46px 
             &.is-active
                 color: $orange
 .article

@@ -321,10 +321,10 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 .breadcrumbs__item a:hover { text-decoration: underline; }
 
 .submenu { text-align: center; height: 49px; margin-bottom: 50px; }
-.submenu__list { display: inline-block; font-size: 0; text-align: center; border: 3px solid #231f20; background: white; }
+.submenu__list { display: inline-block; vertical-align: top; font-size: 0; text-align: center; border: 3px solid #231f20; background: white; }
 .submenu__list.is-fixed { position: fixed; top: 73px; left: 50%; z-index: 99; }
 .submenu__item { display: inline-block; margin: 0 17px; font-size: 0; }
-.submenu__item a { display: inline-block; height: 43px; overflow: hidden; line-height: 43px; font-family: "PFAgoraSansProBlack", sans-serif; font-size: 14px; color: #231f20; text-transform: uppercase; text-decoration: none; -moz-transition: all 150ms; -o-transition: all 150ms; -webkit-transition: all 150ms; transition: all 150ms; }
+.submenu__item a { display: block; height: 43px; overflow: hidden; line-height: 43px; font-family: "PFAgoraSansProBlack", sans-serif; font-size: 14px; color: #231f20; text-transform: uppercase; text-decoration: none; -moz-transition: all 150ms linear; -o-transition: all 150ms linear; -webkit-transition: all 150ms linear; transition: all 150ms linear; }
 .submenu__item a:hover { color: #ff7a08; line-height: 46px; }
 .submenu__item a.is-active { color: #ff7a08; }
 

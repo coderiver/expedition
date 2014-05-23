@@ -54,20 +54,20 @@ head.ready(function() {
 			var news = $(".js-news");
 			var top = news.offset().top;
 			var top2 = $(".container_index").offset().top;
+			var w_top = $(window).scrollTop();
 
-			if ($(window).scrollTop() >= (top - 55)) {
+			if (w_top >= (top - 55)) {
 				$(".js-categories").addClass('is-fixed');
 			}
-			if ($(window).scrollTop() < (top2 - 55)) {
+			if (w_top < (top2 - 55)) {
 				$(".js-categories").removeClass('is-fixed');
 			}
-			if ($(window).scrollTop() >= (top - 206)) {
+			if (w_top >= (top - 206)) {
 				$(".js-fixedtop").addClass('is-scrolled').css('top', (top - 206));
 			}
 			else{
-				$(".js-fixedtop").removeClass('is-scrolled').css('top', 'auto');
+				$(".js-fixedtop").removeClass('is-scrolled').css('top', 'initial');
 			}
-
 		}
 		if ($(".js-news").length) {
 			sticky();
@@ -142,20 +142,23 @@ head.ready(function() {
     	$(".js-overlay").hide();
     	//$(".js-popup").hide();	
 
-    	$(".js-popup-map-btn").on('click', function(event){
-    		$(".js-overlay").show();
-    		$(".js-popup-map").addClass('is-open');
-    		$(".out").addClass('is-hidden');
-    		event.stopPropagation();
-			return false;
-    	});
-    	$(".js-popup-feedback-btn").on('click', function(event){
-    		$(".js-overlay").show();
-    		$(".js-popup-feedback").addClass('is-open');
-    		$(".out").addClass('is-hidden');
-    		event.stopPropagation();
-			return false;
-    	});
+    	function popups_init(){
+    		$(".js-popup-map-btn").on('click', function(event){
+    			$(".js-overlay").show();
+    			$(".js-popup-map").addClass('is-open');
+    			$(".out").addClass('is-hidden');
+    			event.stopPropagation();
+				return false;
+    		});
+    		$(".js-popup-feedback-btn").on('click', function(event){
+    			$(".js-overlay").show();
+    			$(".js-popup-feedback").addClass('is-open');
+    			$(".out").addClass('is-hidden');
+    			event.stopPropagation();
+				return false;
+    		});
+    	}
+    	popups_init();
 
     	function comm(){
     		var top = ($(window).scrollTop() + 100);
@@ -247,13 +250,14 @@ head.ready(function() {
 				submenu();
 			};
     	   	switcher();
+    	   	popups_init();
     	});
 
 		$(document).click(function(){
 			$(".js-bounce").hide();
 			$(".js-overlay").hide();
     		$(".js-popup").removeClass('is-open');
-    		$(".out").removeClass('is-hidden');	
+    		$(".out").removeClass('is-hidden');
 		});
 
 		$(window).resize(function(){
