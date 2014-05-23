@@ -172,6 +172,9 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 .pagination__item a { display: block; width: 26px; height: 26px; line-height: 26px; text-align: center; color: #454545; text-decoration: none; }
 .pagination__item a:hover { background: #ff7a08; color: white; }
 
+.opacity { opacity: 0; -moz-transition: all 0.4s linear; -o-transition: all 0.4s linear; -webkit-transition: all 0.4s linear; transition: all 0.4s linear; -moz-transition-delay: 0.4s; -o-transition-delay: 0.4s; -webkit-transition-delay: 0.4s; transition-delay: 0.4s; }
+.opacity.is-visible { opacity: 1; }
+
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }

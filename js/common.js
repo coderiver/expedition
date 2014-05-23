@@ -238,10 +238,34 @@ head.ready(function() {
     	    });
     	};
 
+    // visibility 
+
+		function visibility(){
+			var window_top = $(window).scrollTop();
+			var window_height = $(window).height();
+			var start_visibility = window_top + window_height;
+			
+			$(".opacity").each(function(){
+				
+				var block_position = $(this).offset().top;
+				
+				if(start_visibility >= block_position){
+					$(this).addClass('is-visible');
+				}
+			});
+		}
+		if ($(".opacity").length) {
+			visibility();
+		}
+			
+
 		$(window).scroll(function(){
     	   	if ($(".js-news").length) {
 				sticky();
 			};
+			if ($(".opacity").length) {
+				visibility();
+			}
 			if ($(".comm").length) {
 				comm();
 			};
