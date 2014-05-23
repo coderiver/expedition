@@ -31,7 +31,7 @@ head.ready(function() {
 		$(".js-point").hover(
 			function(){},
 			function(){
-				$(".js-bounce").hide( "bounce", { times: 2, distance: 20 }, "slow" );
+				$(".js-bounce").hide();
 			}
 		);
 
@@ -192,18 +192,27 @@ head.ready(function() {
 		});	
 
     // cycle reinit
-    
+    //$('.cycle-slideshow').cycle('reinit');
     	function slider(){
+    		var w_width = $(window).width();
     		if ($(window).width() <= 1280) {
-    			$('.cycle-slideshow').cycle('reinit');
+    			// if ($('.cycle-slideshow').hasClass('is-reinit')) {
+    			// 	// return false
+    			// }
+    			// else{
+    			// 	$('.cycle-slideshow').addClass('is-reinit');
+    			// 	$('.cycle-slideshow').cycle('reinit');
+    			// }
+    				$('.cycle-slideshow').cycle('reinit');
     		}
     		else{
-    			$('.cycle-slideshow').cycle('reinit');
+    				//$('.cycle-slideshow').cycle('reinit');
     		}
+
     	}	
-    	if ($(".js-news").length) {
-			slider();
-    	}
+    	//if ($(".js-news").length) {
+		//	slider();
+    	//}
     	
     // fancybox
 
@@ -249,9 +258,9 @@ head.ready(function() {
 
 		$(window).resize(function(){
 			promo();
-			if ($(".js-news").length) {
-				slider();
-    		}
+			//if ($(".js-news").length) {
+			//	slider();
+    		//}
 		});
 
 });

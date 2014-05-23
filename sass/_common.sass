@@ -83,6 +83,8 @@ $orange: #ff7a08
 	&.container_index
 		padding-top: 0
 		margin-top: -142px
+		+r(h870)
+			margin-top: 0
 	+r(w1280)
 		width: 1024px
 		overflow: hidden
@@ -212,6 +214,8 @@ $orange: #ff7a08
 		margin-left: -512px 
 	&.is-scrolled
 		position: absolute
+	&.is-hidden
+		position: absolute	
 	
 // menu
 .main-menu
@@ -344,6 +348,7 @@ $orange: #ff7a08
 		padding-top: 60px
 	&__right
 		float: right
+		width: 232px
 		padding-top: 60px
 	&__mid
 		overflow: hidden

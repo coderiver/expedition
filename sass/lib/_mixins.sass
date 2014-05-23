@@ -31,11 +31,15 @@ $w360: 360px
 $w320: 320px
 
 $h900: 900px
+$h870: 870px
 
 =r($media)
 	@if $media == h900
 		@media only screen and (max-height: $w900)
 			@content
+	@if $media == h870
+		@media only screen and (max-height: $h870)
+			@content		
 	@if $media == w1280
 		@media only screen and (max-width: $w1280)
 			@content
