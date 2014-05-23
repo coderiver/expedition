@@ -198,24 +198,25 @@ head.ready(function() {
     //$('.cycle-slideshow').cycle('reinit');
     	function slider(){
     		var w_width = $(window).width();
+    		var slider = $(".js-news .cycle-slideshow");
+    		
     		if ($(window).width() <= 1280) {
-    			// if ($('.cycle-slideshow').hasClass('is-reinit')) {
-    			// 	// return false
-    			// }
-    			// else{
-    			// 	$('.cycle-slideshow').addClass('is-reinit');
-    			// 	$('.cycle-slideshow').cycle('reinit');
-    			// }
-    				$('.cycle-slideshow').cycle('reinit');
+    			if (slider.hasClass('is-reinit')) {
+    				// return false
+    			}
+    			else{
+    				slider.addClass('is-reinit');
+    				slider.cycle('reinit');
+    			}
     		}
     		else{
-    				//$('.cycle-slideshow').cycle('reinit');
+    			//$('.cycle-slideshow').cycle('reinit');
     		}
 
     	}	
-    	//if ($(".js-news").length) {
-		//	slider();
-    	//}
+    	if ($(".js-news").length) {
+			slider();
+    	}
     	
     // fancybox
 
@@ -262,9 +263,9 @@ head.ready(function() {
 
 		$(window).resize(function(){
 			promo();
-			//if ($(".js-news").length) {
-			//	slider();
-    		//}
+			if ($(".js-news").length) {
+				slider();
+    		}
 		});
 
 });
