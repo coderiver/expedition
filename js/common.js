@@ -196,11 +196,6 @@ head.ready(function() {
 
     // cycle reinit
     //$('.cycle-slideshow').cycle('reinit');
-    var slider = $(".js-news .cycle-slideshow");
-    $('body').click(function(event) {
-    	alert('gogo');
-    	slider.cycle('reinit');
-    });
 
     	previous = $(window).width();
     	function sr(){
