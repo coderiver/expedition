@@ -145,9 +145,6 @@
 	margin-top: -29px;
 	cursor: pointer;
 	background: #fff;
-	-webkit-box-shadow: inset -4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3;
-	-moz-box-shadow: inset -4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3;
-	box-shadow: inset -4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3;
 	-webkit-transition: all 150ms linear;
 	-moz-transition: all 150ms linear;
 	transition: all 150ms linear;
@@ -160,11 +157,18 @@
 .fancybox-prev span {
 	left: 0px;
 	background: #fff url(../img/prev.png) 50% 50% no-repeat;
+	-webkit-box-shadow: inset -4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3;
+	-moz-box-shadow: inset -4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3;
+	box-shadow: inset -4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3;
 }
 
 .fancybox-next span {
 	right: 0px;
 	background: #fff url(../img/next.png) 50% 50% no-repeat;
+	-webkit-box-shadow: inset 4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3;
+	-moz-box-shadow: inset 4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3;
+	box-shadow: inset 4px 0 0 #f0f6f9, 0px 4px 0px 0px #d7e1e3;
+	
 }
 
 .fancybox-tmp {
