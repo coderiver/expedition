@@ -28,7 +28,7 @@ body.transition { background: white; }
 .out.is-hidden { -moz-transform: scale(0.95); -ms-transform: scale(0.95); -webkit-transform: scale(0.95); transform: scale(0.95); }
 @media only screen and (max-height: 900px) { .out { background-position: 50% -125px; } }
 
-.container { position: relative; width: 1158px; margin: 0 auto; padding-top: 250px; background: white; }
+.container { position: relative; width: 1158px; margin: 0 auto; padding-top: 250px; background: white; z-index: 2; }
 .container.container_index { padding-top: 0; margin-top: -142px; }
 @media only screen and (max-height: 870px) { .container.container_index { margin-top: 0; } }
 @media only screen and (max-width: 1280px) { .container { width: 1024px; overflow: hidden; } }
@@ -100,7 +100,7 @@ body.transition { background: white; }
 .categories__item.last { background: #fb842d; }
 .categories__item.last.is-active:before { content: ""; position: absolute; bottom: -9px; left: 50%; margin-left: -10px; width: 0px; height: 0px; border-style: solid; border-width: 9px 10px 0 10px; border-color: #fb842d transparent transparent transparent; }
 
-.footer { width: 1158px; margin: 0 auto; overflow: hidden; background: #ff7a08; }
+.footer { position: relative; width: 1158px; margin: 0 auto; overflow: hidden; background: #ff7a08; z-index: 2; }
 @media only screen and (max-width: 1280px) { .footer { width: 1024px; } }
 .footer__inner { *zoom: 1; padding: 18px 30px 25px 103px; }
 .footer__inner:after { content: " "; display: table; clear: both; }
@@ -186,6 +186,8 @@ body.transition { background: white; }
 .transition.transition8 { -moz-transition-delay: 3.6s; -o-transition-delay: 3.6s; -webkit-transition-delay: 3.6s; transition-delay: 3.6s; }
 
 .preloader { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url(../img/ill1.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); z-index: 999; }
+
+.load { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url(../img/ill1.jpg) no-repeat; z-index: 1; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }

@@ -81,6 +81,7 @@ $orange: #ff7a08
 	margin: 0 auto
 	padding-top: 250px 
 	background: #fff
+	z-index: 2
 	&.container_index
 		padding-top: 0
 		margin-top: -142px
@@ -336,10 +337,12 @@ $orange: #ff7a08
 
 // footer
 .footer
+	position: relative
 	width: 1158px
 	margin: 0 auto
 	overflow: hidden
 	background: $orange
+	z-index: 2
 	+r(w1280)
 		width: 1024px
 	&__inner
@@ -626,6 +629,14 @@ $orange: #ff7a08
 	+cover
 	+gpu
 	z-index: 999
+.load
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: url(../img/ill1.jpg) no-repeat 
+	z-index: 1 	
 																 
 		
 						

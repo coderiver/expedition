@@ -274,7 +274,8 @@ head.ready(function() {
 	// preloader
 
 		$(window).load(function(){
-			$(".preloader").fadeOut(1500);
+			$(".preloader").fadeOut(1000);	
+			setTimeout('$(".load").fadeOut(1500)', 1000);
 		});
 		
 
