@@ -258,7 +258,7 @@ head.ready(function() {
 			var window_height = $(window).height();
 			var start_visibility = window_top + window_height;
 			
-			$(".opacity").each(function(){
+			$(".transition").each(function(){
 				
 				var block_position = $(this).offset().top;
 				
@@ -267,16 +267,29 @@ head.ready(function() {
 				}
 			});
 		}
-		if ($(".opacity").length) {
+		if ($(".transition").length) {
 			visibility();
 		}
 			
+	// preloader
+
+		$(window).load(function(){
+			$(".preloader").fadeOut(1500);
+			//$("body").addClass('is-loading');
+		});
+		// if ($("body").hasClass("is-loading")) {
+		// 	$(".preloader").fadeIn();
+		// }
+		// else{
+		// 	$(".preloader").fadeOut();
+		// }
+		
 
 		$(window).scroll(function(){
     	   	if ($(".js-news").length) {
 				sticky();
 			};
-			if ($(".opacity").length) {
+			if ($(".transition").length) {
 				visibility();
 			}
 			if ($(".comm").length) {

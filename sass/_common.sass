@@ -593,28 +593,39 @@ $orange: #ff7a08
 			&:hover
 				background: $orange
 				color: #fff
-.opacity
+.transition
 	opacity: 0
 	+transition(all .4s linear)
 	+transition-delay(.4s)
 	&.is-visible
 		opacity: 1
-	&.opacity1
-		+transition-delay(.7s)
-	&.opacity2
-		+transition-delay(1s)
-	&.opacity3
-		+transition-delay(1.3s)
-	&.opacity4
+	&.transition1
+		+transition-delay(.8s)
+	&.transition2
+		+transition-delay(1.2s)
+	&.transition3
 		+transition-delay(1.6s)
-	&.opacity5
-		+transition-delay(1.9s)
-	&.opacity6
-		+transition-delay(2.2s)
-	&.opacity7
-		+transition-delay(2.5s)
-	&.opacity8
-		+transition-delay(2.8s)													 
+	&.transition4
+		+transition-delay(2s)
+	&.transition5
+		+transition-delay(2.4s)
+	&.transition6
+		+transition-delay(2.8s)
+	&.transition7
+		+transition-delay(3.2s)
+	&.transition8
+		+transition-delay(3.6s)
+.preloader
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: url(../img/ill1.jpg)
+	+cover
+	+gpu
+	z-index: 999
+																 
 		
 						
 		
