@@ -20,6 +20,7 @@ ul, ol { list-style-type: none; }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; line-height: 1.4; letter-spacing: 1px; background: #222222 url(../img/body-bg.png); }
+body.transition { background: white; }
 
 @font-face { font-family: PFAgoraSansProBlack; src: url("fonts/pfagorasanspro-black.eot"); src: url("fonts/pfagorasanspro-black.eot?#iefix") format("embedded-opentype"), url("fonts/pfagorasanspro-black.woff") format("woff"), url("fonts/pfagorasanspro-black.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: ReformaGroteskDemiCRegular; src: url("fonts/reformagroteskdemic.eot"); src: url("fonts/reformagroteskdemic.eot?#iefix") format("embedded-opentype"), url("fonts/reformagroteskdemic.woff") format("woff"), url("fonts/reformagroteskdemic.ttf") format("truetype"); font-weight: normal; font-style: normal; }

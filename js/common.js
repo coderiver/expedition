@@ -275,14 +275,7 @@ head.ready(function() {
 
 		$(window).load(function(){
 			$(".preloader").fadeOut(1500);
-			//$("body").addClass('is-loading');
 		});
-		// if ($("body").hasClass("is-loading")) {
-		// 	$(".preloader").fadeIn();
-		// }
-		// else{
-		// 	$(".preloader").fadeOut();
-		// }
 		
 
 		$(window).scroll(function(){
