@@ -113,7 +113,7 @@ body { min-width: 1024px; font-size: 14px; font-family: "PT Sans", sans-serif; l
 .main-menu_footer .main-menu__item a { color: white; }
 
 .search { position: relative; margin-bottom: 55px; }
-.search input[type="text"] { width: 190px; height: 30px; padding: 0 26px 0 16px; border-radius: 15px; background: #e8680f; -moz-transition: background 150ms; -o-transition: background 150ms; -webkit-transition: background 150ms; transition: background 150ms; color: white; }
+.search input[type="text"] { width: 148px; height: 30px; padding: 0 26px 0 16px; border-radius: 15px; background: #e8680f; -moz-transition: background 150ms; -o-transition: background 150ms; -webkit-transition: background 150ms; transition: background 150ms; color: white; }
 .search input[type="text"]:-ms-input-placeholder { color: white; font-family: "PT Sans", sans-serif; font-size: 12px; }
 .search input[type="text"]:-moz-placeholder { color: white; font-family: "PT Sans", sans-serif; font-size: 12px; }
 .search input[type="text"]::-moz-placeholder { color: white; font-family: "PT Sans", sans-serif; font-size: 12px; }
