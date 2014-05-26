@@ -337,12 +337,13 @@ $orange: #ff7a08
 .footer
 	width: 1158px
 	margin: 0 auto
+	overflow: hidden
 	background: $orange
 	+r(w1280)
 		width: 1024px
 	&__inner
 		+clr
-		padding: 18px 30px 0 103px
+		padding: 18px 30px 25px 103px
 	&__left
 		float: left
 		padding-top: 60px
@@ -391,6 +392,7 @@ $orange: #ff7a08
 		+s(search)
 .scrolltop
 	position: relative
+	top: 45px
 	display: inline-block
 	margin-left: 15px
 	+reforma
@@ -398,6 +400,9 @@ $orange: #ff7a08
 	font-size: 20px
 	text-transform: uppercase
 	text-decoration: none
+	+transition(all 500ms)
+	&.is-visible
+		top: 0
 	&:before
 		content: ""
 		position: absolute
@@ -593,7 +598,23 @@ $orange: #ff7a08
 	+transition(all .4s linear)
 	+transition-delay(.4s)
 	&.is-visible
-		opacity: 1						 
+		opacity: 1
+	&.opacity1
+		+transition-delay(.7s)
+	&.opacity2
+		+transition-delay(1s)
+	&.opacity3
+		+transition-delay(1.3s)
+	&.opacity4
+		+transition-delay(1.6s)
+	&.opacity5
+		+transition-delay(1.9s)
+	&.opacity6
+		+transition-delay(2.2s)
+	&.opacity7
+		+transition-delay(2.5s)
+	&.opacity8
+		+transition-delay(2.8s)													 
 		
 						
 		

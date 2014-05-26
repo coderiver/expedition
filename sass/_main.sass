@@ -359,11 +359,44 @@
 				color: #f37f93
 		&.blue
 			p
-				color: #75a7d9								
+				color: #75a7d9
+		&.is-visible
+			.about__inner
+				+transition-delay(.7s)
+				+rotateY(180deg)
+			&.opacity1
+				.about__inner
+					+transition-delay(1s)
+			&.opacity2
+				.about__inner
+					+transition-delay(1.3s)
+			&.opacity3
+				.about__inner
+					+transition-delay(1.6s)
+			&.opacity4
+				.about__inner
+					+transition-delay(1.9s)															
 	&__img
+		position: relative
 		margin-bottom: 20px
 		height: 80px
 		font-size: 0
+		+perspective(800px)	
+	&__inner
+		+transition(all .25s linear)
+		+transform-style(preserve-3d)
+		+gpu
+	&__front
+		position: absolute
+		left: 50%
+		margin-left: -38px
+		+backface-visibility(visible)
+	&__back
+		position: absolute
+		left: 50%
+		margin-left: -38px
+		+backface-visibility(hidden)
+		+rotateY(180deg)			
 	&__more
 		position: absolute
 		bottom: -25px

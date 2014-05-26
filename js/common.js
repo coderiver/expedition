@@ -110,6 +110,19 @@ head.ready(function() {
         	return false; 
 		});
 
+		function scrolltop_toggle(){
+			var h = $(".out").height();
+			var w_h = $(window).height();
+			var start = (h - w_h);
+			if ($(window).scrollTop() >= start) {
+				$(".scrolltop").addClass('is-visible');
+			}
+			else{
+				$(".scrolltop").removeClass('is-visible');
+			}
+		}
+		scrolltop_toggle();	
+
 	// yandex map
     	
     	ymaps.ready(function () {
@@ -277,6 +290,7 @@ head.ready(function() {
 			};
     	   	switcher();
     	   	popups_init();
+    	   	scrolltop_toggle();
     	});
 
 		$(document).click(function(){
