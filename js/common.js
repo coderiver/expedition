@@ -218,7 +218,7 @@ head.ready(function() {
     	previous = $(window).width();
     	function sr(){
     		var current = $(window).width();
-    		var slider = $(".js-news .cycle-slideshow");
+    		var slider = $(".cycle-slideshow");
     		supernomer = (1280-current)*(1280-previous);
     		//console.log(supernomer+'==='+previous+'==='+current);
     		if(supernomer<0){
@@ -273,10 +273,10 @@ head.ready(function() {
 			
 	// preloader
 
-		$(window).load(function(){
-			$(".preloader").fadeOut(1000);	
-			setTimeout('$(".load").fadeOut(1500)', 1000);
-		});
+		// $(window).load(function(){
+		// 	$(".preloader").fadeOut(1000);	
+		// 	setTimeout('$(".load").fadeOut(1500)', 1000);
+		// });
 		
 
 		$(window).scroll(function(){

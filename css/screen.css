@@ -219,10 +219,11 @@ body.transition { background: white; }
 .promo__point { position: relative; display: block; width: 10px; height: 10px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background: white; cursor: pointer; }
 .promo__point:hover { background: #ff7a08; }
 .promo__point:hover:before { color: white; }
-.promo__hint { position: absolute; bottom: 24px; width: 312px; left: -152px; background: white; text-decoration: none; z-index: 999; }
-.promo__hint:before { content: ""; position: absolute; bottom: -15px; left: 50%; margin-left: -15px; width: 0px; height: 0px; border-style: solid; border-width: 15px 15px 0 15px; border-color: white transparent transparent transparent; }
-.promo__hint img { display: block; }
-.promo__hint p { text-align: center; padding: 17px 0; font-size: 18px; color: #ff7a08; font-weight: bold; }
+.promo__hint { position: absolute; bottom: 4px; width: 312px; left: -151px; padding-bottom: 20px; text-decoration: none; z-index: 999; }
+.promo__hint:before { content: ""; position: absolute; bottom: 5px; left: 50%; margin-left: -15px; width: 0px; height: 0px; border-style: solid; border-width: 15px 15px 0 15px; border-color: white transparent transparent transparent; }
+.promo__hint-inner { position: relative; background: white; }
+.promo__hint-inner img { display: block; }
+.promo__hint-inner p { text-align: center; padding: 17px 0; font-size: 18px; color: #ff7a08; font-weight: bold; }
 .promo__place1 { top: 79%; left: -4%; }
 .promo__place2 { top: 64%; left: 17%; }
 .promo__place3 { top: 57%; left: 24.5%; }
